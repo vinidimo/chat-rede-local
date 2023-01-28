@@ -23,8 +23,8 @@ public class JanelaChat extends JFrame implements Observer {
     
     static int contaMsg; //contador de caracteres da caixa de texto
     
-    public void conexaoCom() { /* método que escreve quais IPs estão conectados */
-        escreve("Conexão estabelecida com:");
+    public void conexaoCom() { /* mï¿½todo que escreve quais IPs estï¿½o conectados */
+        escreve("Conexï¿½o estabelecida com:");
         
         escreve("+ "+ conexao.getIp01() + ":" + conexao.getPorta());
         
@@ -47,13 +47,13 @@ public class JanelaChat extends JFrame implements Observer {
     
     private Conexao conexao;
     public JanelaChat(Conexao conexao) {
-        super("Execuzões - " + JanelaIP.numerodePessoas + " conexões");
+        super("Execuzï¿½es - " + JanelaIP.numerodePessoas + " conexï¿½es");
         setIconImage(Toolkit.getDefaultToolkit().getImage(JanelaChat.class.getResource("/chatsimples/network.png")));
         this.conexao = conexao;
         this.setResizable(true); //(des)habilita redimensionar a tela
         initComponents();
         conexao.addObserver(this);
-        conexaoCom(); //puxa o metodo CONEXAOCOM que escreve quais IPs estão conectados
+        conexaoCom(); //puxa o metodo CONEXAOCOM que escreve quais IPs estï¿½o conectados
         
                 mensagemjTextArea.requestFocusInWindow();
     }
@@ -67,13 +67,13 @@ public class JanelaChat extends JFrame implements Observer {
                 Date date = new Date();
                 calendar.setTime(date);
                 String horaAtual = out.format(calendar.getTime());
-            escreve("Você disse ("+horaAtual+"): "+mensagemjTextArea.getText());
+            escreve("Vocï¿½ disse ("+horaAtual+"): "+mensagemjTextArea.getText());
             mensagemjTextArea.setText("");
         }
     }
     private void limpa() {
             chatjTextArea.setText("");
-            conexaoCom(); //puxa o metodo CONEXAOCOM que escreve quais IPs estão conectados
+            conexaoCom(); //puxa o metodo CONEXAOCOM que escreve quais IPs estÃ£o conectados
     }
 
     private void escreve(String texto){
@@ -91,13 +91,13 @@ public class JanelaChat extends JFrame implements Observer {
         enviarjButton = new JButton();
         limparjButton = new JButton();
         
-        this.setMinimumSize(new Dimension(390,245)); //tamanho mínimo da janela larguraxaltura
+        this.setMinimumSize(new Dimension(390,245)); //tamanho mÃ­nimo da janela larguraxaltura
         this.setDefaultCloseOperation(JanelaChat.DO_NOTHING_ON_CLOSE);  
         this.addWindowListener(new WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
                         if (e.getID() == WindowEvent.WINDOW_CLOSING) {
-                            int selectedOption = JOptionPane.showConfirmDialog(null,"Deseja encerrar Execuzões?", "Sair",JOptionPane.YES_NO_OPTION);  
+                            int selectedOption = JOptionPane.showConfirmDialog(null,"Deseja encerrar ExecuzÃµes?", "Sair",JOptionPane.YES_NO_OPTION);  
                             if (selectedOption == JOptionPane.YES_OPTION) {
                                 System.exit(0);  
                             }  
@@ -176,10 +176,10 @@ public class JanelaChat extends JFrame implements Observer {
     }                       
 
     private void enviarjButtonActionPerformed(ActionEvent evt) {                                              
-        envia(); //botão ENVIAR chama o método ENVIA()
+        envia(); //botï¿½o ENVIAR chama o mï¿½todo ENVIA()
     } 
     private void limparjButtonActionPerformed(ActionEvent evt) {                                              
-        limpa(); //botão ENVIAR chama o método ENVIA()
+        limpa(); //botï¿½o ENVIAR chama o mï¿½todo ENVIA()
     } 
 
     private void mensagemjTextAreaKeyReleased(KeyEvent evt) {                                              

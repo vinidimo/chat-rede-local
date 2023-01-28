@@ -22,7 +22,7 @@ public class Conexao extends Observable {
 	private String ip03;
 	private String ip04;
 	private String ip05;
-        private String nome;
+    private String nome;
 
     public Conexao(String ip01, String ip02, String ip03, String ip04, String ip05, int porta) {
         this.ip01 = ip01;
@@ -108,7 +108,7 @@ public class Conexao extends Observable {
                         nome = pacoteRecebido.getAddress().toString();
                             while (s.length() > JanelaChat.contaMsg) {
                                 s = s.substring(0, s.length() -1);
-                            } // método para apagar o lixo após a mensagem
+                            } // mï¿½todo para apagar o lixo apï¿½s a mensagem
                         notifica("IP "+nome + " disse ("+horaAtual+"): " + s);
                     }
                     catch (Exception e) {

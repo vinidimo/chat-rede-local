@@ -35,10 +35,10 @@ public class JanelaIP extends JFrame {
 	public static String ip04 = "vazio";
 	public static String ip05 = "vazio";
         
-        static int numerodePessoas = 0;
+	static int numerodePessoas = 0;
 	
 	public JanelaIP(Observable c01) {
-		setTitle("Execuzões");
+		setTitle("Execuzï¿½es");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(JanelaIP.class.getResource("/chatsimples/network.png")));
 		setResizable(false);
                 
@@ -47,7 +47,7 @@ public class JanelaIP extends JFrame {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {  
                         if (e.getID() == WindowEvent.WINDOW_CLOSING) {  
-                            int selectedOption = JOptionPane.showConfirmDialog(null,"Deseja encerrar Execuzões?", "Sair",JOptionPane.YES_NO_OPTION);  
+                            int selectedOption = JOptionPane.showConfirmDialog(null,"Deseja encerrar Execuzï¿½es?", "Sair",JOptionPane.YES_NO_OPTION);  
                             if (selectedOption == JOptionPane.YES_OPTION) {  
                                 System.exit(0);  
                             }  
@@ -76,22 +76,22 @@ public class JanelaIP extends JFrame {
 		txtIP01 = new JTextField();
 		txtIP01.setText(msgIp);
 		txtIP01.setBounds(99, 38, 107, 20);
-                txtIP01.setText("192.168.11.");
+		txtIP01.setText("192.168.11.");
 		txtIP01.setColumns(10);
-                getContentPane().add(txtIP01);
+		getContentPane().add(txtIP01);
 		
 		txtIP02 = new JTextField();
 		txtIP02.setEditable(false);
 		txtIP02.setColumns(10);
 		txtIP02.setBounds(99, 71, 107, 20);
-                txtIP02.setText("vazio");
+		txtIP02.setText("vazio");
 		getContentPane().add(txtIP02);
 		
 		txtIP03 = new JTextField();
 		txtIP03.setEditable(false);
 		txtIP03.setColumns(10);
 		txtIP03.setBounds(99, 105, 107, 20);
-                txtIP03.setText("vazio");
+		txtIP03.setText("vazio");
 		getContentPane().add(txtIP03);
 		
 		txtIP04 = new JTextField();
@@ -106,7 +106,7 @@ public class JanelaIP extends JFrame {
 		txtIP05.setToolTipText("");
 		txtIP05.setColumns(10);
 		txtIP05.setBounds(99, 167, 107, 20);
-                txtIP05.setText("vazio");
+		txtIP05.setText("vazio");
 		getContentPane().add(txtIP05);
 		
 		JCheckBox ativaIP02 = new JCheckBox("IP 02:");
@@ -189,7 +189,7 @@ public class JanelaIP extends JFrame {
                     }
 		});
                 
-                getRootPane().setDefaultButton(btnConfirma); // Faz a tecla ENTER acionar o botão btnConfirma
+                getRootPane().setDefaultButton(btnConfirma); // Faz a tecla ENTER acionar o botï¿½o btnConfirma
 
 		btnConfirma.setBounds(62, 234, 123, 31);
 		getContentPane().add(btnConfirma);
@@ -219,7 +219,7 @@ public class JanelaIP extends JFrame {
                                     ip04 = (txtIP04.getText());
                                     ip05 = (txtIP05.getText());
 
-                        int selectedOption = JOptionPane.showConfirmDialog(null,"Confirma?", "Execuzões", JOptionPane.YES_NO_OPTION);
+                        int selectedOption = JOptionPane.showConfirmDialog(null,"Confirma?", "Execuzï¿½es", JOptionPane.YES_NO_OPTION);
                         if (selectedOption == JOptionPane.YES_OPTION) {
                             
                             if (!"vazio".equals(ip01)) {
@@ -248,11 +248,11 @@ public class JanelaIP extends JFrame {
                         }
                     }
                             else {
-                                    JOptionPane.showMessageDialog(null, "Porta inválida!", "Erro!", 2);
+                                    JOptionPane.showMessageDialog(null, "Porta invï¿½lida!", "Erro!", 2);
                             }
                     }
                     catch (java.lang.NumberFormatException e) {
-                            JOptionPane.showMessageDialog(null, "Valor inválido!", "Erro!", 2);
+                            JOptionPane.showMessageDialog(null, "Valor invï¿½lido!", "Erro!", 2);
                     }
                 }
 		public JanelaIP(String ip01, String ip02, String ip03, String ip04, String ip05) {

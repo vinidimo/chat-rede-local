@@ -65,7 +65,7 @@ public class Calc extends JFrame {
 		});
 	}
 	public Calc() {
-		setTitle("Calcuzão");
+		setTitle("CalcuzÃ£o");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Calc.class.getResource("/chatsimples/calculator.png")));
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -89,7 +89,6 @@ public class Calc extends JFrame {
 		contentPane.add(txtDisplay);
 		txtDisplay.setColumns(10);
 		
-		
 		contentPane.add(new JButton(acaoBotao1)).setBounds(10, 210, 45, 45);
 		contentPane.add(new JButton(acaoBotao2)).setBounds(60, 210, 45, 45);
 		contentPane.add(new JButton(acaoBotao3)).setBounds(110, 210, 45, 45);
@@ -100,25 +99,20 @@ public class Calc extends JFrame {
 		contentPane.add(new JButton(acaoBotao8)).setBounds(60, 110, 45, 45);
 		contentPane.add(new JButton(acaoBotao9)).setBounds(110, 110, 45, 45);
 		contentPane.add(new JButton(acaoBotao0)).setBounds(10, 260, 145, 45);
-		
-                contentPane.add(new JButton(acaoBotaoC)).setBounds(10, 60, 45, 45);
-                contentPane.add(new JButton(acaoBotaoPonto)).setBounds(160, 160, 45, 45);
-                contentPane.add(new JButton(acaoBotaoDiv)).setBounds(60, 60, 45, 45);
+		contentPane.add(new JButton(acaoBotaoC)).setBounds(10, 60, 45, 45);
+		contentPane.add(new JButton(acaoBotaoPonto)).setBounds(160, 160, 45, 45);
+		contentPane.add(new JButton(acaoBotaoDiv)).setBounds(60, 60, 45, 45);
 		contentPane.add(new JButton(acaoBotaoMult)).setBounds(110, 60, 45, 45);
 		contentPane.add(new JButton(acaoBotaoSoma)).setBounds(160, 60, 45, 45);
-                contentPane.add(new JButton(acaoBotaoSub)).setBounds(160, 110, 45, 45);
-                contentPane.add(new JButton(acaoBotaoIgual)).setBounds(160, 210, 45, 95);
-                
+		contentPane.add(new JButton(acaoBotaoSub)).setBounds(160, 110, 45, 45);
+		contentPane.add(new JButton(acaoBotaoIgual)).setBounds(160, 210, 45, 95);
                 
 		JLabel lblVersao = new JLabel("v1.065.20");
 		lblVersao.setForeground(Color.LIGHT_GRAY);
 		lblVersao.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblVersao.setBounds(10, 310, 195, 14);
 		contentPane.add(lblVersao);
-	
 	}
-	
-	
 	
 	public void PegaNum1(){
 		Calc.num1 = Double.parseDouble(txtDisplay.getText());
@@ -208,7 +202,7 @@ public class Calc extends JFrame {
     			if (senha == 106520) {
                     setVisible(false); //fecha a janela da calculadora quando abre o chat
     				
-                    JOptionPane.showMessageDialog(null, "Bem-Vindo ao Execuzões", "Execuzões", -1);
+                    JOptionPane.showMessageDialog(null, "Bem-Vindo ao ExecuzÃµes", "ExecuzÃµes", -1);
                     
                     String ip01 = "vazio";
                 	String ip02 = "vazio";
@@ -241,11 +235,10 @@ public class Calc extends JFrame {
                 
 	    }
 	}
-	
 
 	private void registrarAcoesDoTeclado(JPanel contentPane) {
-            //Damos um nome para cada ação. Esse nome é útil pois mais de
-            //uma tecla pode ser associada a cada ação, como veremos abaixo
+            //Damos um nome para cada aÃ§Ã£o. Esse nome Ã© Ãºtil pois mais de
+            //uma tecla pode ser associada a cada aÃ§Ã£o, como veremos abaixo
 
             ActionMap actionMap = contentPane.getActionMap();
             actionMap.put("botao1", acaoBotao1);
@@ -281,11 +274,11 @@ public class Calc extends JFrame {
 	    imap.put(KeyStroke.getKeyStroke("8"), "botao8");
 	    imap.put(KeyStroke.getKeyStroke("9"), "botao9");
 	    imap.put(KeyStroke.getKeyStroke("0"), "botao0");
-            imap.put(KeyStroke.getKeyStroke("ESCAPE"), "botaoC");
-            imap.put(KeyStroke.getKeyStroke("C"), "botaoC");
-            imap.put(KeyStroke.getKeyStroke("EQUALS"), "botaoIgual");
+		imap.put(KeyStroke.getKeyStroke("ESCAPE"), "botaoC");
+		imap.put(KeyStroke.getKeyStroke("C"), "botaoC");
+		imap.put(KeyStroke.getKeyStroke("EQUALS"), "botaoIgual");
 	    
-	    //Botões do teclado numérico
+	    //Botï¿½es do teclado numï¿½rico
 	    imap.put(KeyStroke.getKeyStroke("NUMPAD1"), "botao1");
 	    imap.put(KeyStroke.getKeyStroke("NUMPAD2"), "botao2");
 	    imap.put(KeyStroke.getKeyStroke("NUMPAD3"), "botao3");
@@ -296,13 +289,13 @@ public class Calc extends JFrame {
 	    imap.put(KeyStroke.getKeyStroke("NUMPAD8"), "botao8");
 	    imap.put(KeyStroke.getKeyStroke("NUMPAD9"), "botao9");
 	    imap.put(KeyStroke.getKeyStroke("NUMPAD0"), "botao0");
-            imap.put(KeyStroke.getKeyStroke("DIVIDE"), "botaoDiv");
-            imap.put(KeyStroke.getKeyStroke("MULTIPLY"), "botaoMult");
-            imap.put(KeyStroke.getKeyStroke("ADD"), "botaoSoma");
-            imap.put(KeyStroke.getKeyStroke("SUBTRACT"), "botaoSub");
-            imap.put(KeyStroke.getKeyStroke("SUBTRACT"), "botaoSub");
-            imap.put(KeyStroke.getKeyStroke("DECIMAL"), "botaoPonto");
-            imap.put(KeyStroke.getKeyStroke("PERIOD"), "botaoPonto");
-            imap.put(KeyStroke.getKeyStroke("ENTER"), "botaoIgual");
+		imap.put(KeyStroke.getKeyStroke("DIVIDE"), "botaoDiv");
+		imap.put(KeyStroke.getKeyStroke("MULTIPLY"), "botaoMult");
+		imap.put(KeyStroke.getKeyStroke("ADD"), "botaoSoma");
+		imap.put(KeyStroke.getKeyStroke("SUBTRACT"), "botaoSub");
+		imap.put(KeyStroke.getKeyStroke("SUBTRACT"), "botaoSub");
+		imap.put(KeyStroke.getKeyStroke("DECIMAL"), "botaoPonto");
+		imap.put(KeyStroke.getKeyStroke("PERIOD"), "botaoPonto");
+		imap.put(KeyStroke.getKeyStroke("ENTER"), "botaoIgual");
 	}
 }
